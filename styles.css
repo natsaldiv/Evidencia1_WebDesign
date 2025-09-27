@@ -1,0 +1,48 @@
+/* styles.css - simple y limpio */
+:root{
+  --bg:#f7f8fa;
+  --card:#ffffff;
+  --accent:#0077cc;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  margin:0;
+  background:var(--bg);
+  color:#111;
+}
+
+.topbar{
+  background:var(--card);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0.75rem 1rem;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06);
+}
+
+.container{max-width:1000px;margin:1.2rem auto;padding:1rem}
+.card{background:var(--card);padding:1.2rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.05)}
+
+h1,h2,h3,h4{margin:0.2rem 0}
+label{display:block;margin:0.55rem 0}
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], textarea, select {
+  width:100%; padding:0.5rem;border:1px solid #ddd;border-radius:6px;background:#fff;
+}
+button{
+  background:var(--accent); color:#fff; border:none; padding:0.6rem 0.9rem;border-radius:6px; cursor:pointer;
+}
+button:hover{opacity:0.95}
+.alert{background:#fff3cd;border:1px solid #ffeeba;padding:0.6rem;border-radius:6px;margin-bottom:0.6rem}
+.centered{display:flex;align-items:center;justify-content:center;height:100vh;background:var(--bg)}
+
+.med-row{display:flex;gap:0.5rem;margin-bottom:0.5rem}
+.med-row input{flex:1}
+.btn-remove{background:#e55353}
+
+@media print{
+  body{background:white}
+  .topbar, .print-actions, a { display:none !important; }
+  .container{box-shadow:none;padding:0}
+}
